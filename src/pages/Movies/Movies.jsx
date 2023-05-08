@@ -28,7 +28,7 @@ export const Movies = () => {
 
   return (
     <>
-      <SearchBox onSubmit={handleSubmit} onChange={handleChange} />
+      <SearchBox onSubmit={handleSubmit} query={searchParams.get('query') ?? ''} onChange={handleChange} />
       <MoviesList movies={movies} />
     </>
   );
